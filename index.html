@@ -1,90 +1,53 @@
-:root {
-    --bg-color: #0f172a;
-    --card-bg: #1e293b;
-    --text-color: #f8fafc;
-    --primary-color: #38bdf8;
-    --accent-color: #0ea5e9;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oL0adSide | IPA Signer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>oL0adSide</h1>
+            <p>Professional IPA Signing Tool</p>
+        </header>
 
-body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    font-family: 'Inter', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-}
+        <main>
+            <section class="upload-section">
+                <div class="input-group">
+                    <label for="ipa-file">Select IPA File</label>
+                    <input type="file" id="ipa-file" accept=".ipa">
+                </div>
 
-.container {
-    background: var(--card-bg);
-    padding: 2rem;
-    border-radius: 1.5rem;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-    width: 100%;
-    max-width: 450px;
-    text-align: center;
-}
+                <div class="input-group">
+                    <label for="p12-file">Select P12 Certificate</label>
+                    <input type="file" id="p12-file" accept=".p12">
+                </div>
 
-header h1 {
-    margin: 0;
-    font-size: 2rem;
-    color: var(--primary-color);
-}
+                <div class="input-group">
+                    <label for="mobileprovision">Select Mobileprovision</label>
+                    <input type="file" id="mobileprovision" accept=".mobileprovision">
+                </div>
 
-header p {
-    opacity: 0.7;
-    font-size: 0.9rem;
-    margin-bottom: 2rem;
-}
+                <div class="input-group">
+                    <label for="password">Certificate Password</label>
+                    <input type="password" id="password" placeholder="Enter password">
+                </div>
 
-.input-group {
-    text-align: left;
-    margin-bottom: 1.2rem;
-}
+                <button id="sign-button" class="btn-primary">Sign and Install</button>
+            </section>
 
-label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-size: 0.85rem;
-    font-weight: 600;
-}
+            <div id="status-console" class="console">
+                <span class="dot"></span> Waiting for files...
+            </div>
+        </main>
 
-input {
-    width: 100%;
-    padding: 0.75rem;
-    border-radius: 0.5rem;
-    border: 1px solid #334155;
-    background: #0f172a;
-    color: white;
-    box-sizing: border-box;
-}
-
-.btn-primary {
-    width: 100%;
-    padding: 1rem;
-    border: none;
-    border-radius: 0.75rem;
-    background: var(--primary-color);
-    color: #0f172a;
-    font-weight: bold;
-    cursor: pointer;
-    transition: transform 0.2s, background 0.2s;
-}
-
-.btn-primary:hover {
-    background: var(--accent-color);
-    transform: translateY(-2px);
-}
-
-.console {
-    margin-top: 1.5rem;
-    padding: 0.75rem;
-    background: #000;
-    border-radius: 0.5rem;
-    font-family: monospace;
-    font-size: 0.8rem;
-    color: #10b981;
-    text-align: left;
-}
+        <footer>
+            <p>&copy; 2026 oL0adSide Engine</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
